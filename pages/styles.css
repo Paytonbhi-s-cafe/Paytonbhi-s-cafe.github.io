@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --bodybackground: linear-gradient(180deg, #5905E3 0%, #1E1036 93.58%);
+    --darkpurple1: #150036;
+    --darkblue: #0924B5;
+}
+
+body{
+    background-color: var(--bodybackground);
+    margin: 0;
+}
+/* Reacuring Objects */
+div.logo_person{
+    width: 42px;
+    height: 42px;
+    content: '';
+    background: center;
+    background-size: 45px;
+    background-image: url("../Images/PaytonBhi.png");
+    border-radius: 10px;
+}
+
+div.logo_coffee{
+    width: 42px;
+    height: 42px;
+    content: '';
+    background: center;
+    background-size: 45px;
+    background-image: url("../Images/CoffeeCup.png");
+    border-radius: 10px;
+}
+
+
+/* navbar */
+div.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: relative;
+    height: 62px;
+    left: 0px;
+    top: 0px;
+
+    background-color: var(--darkpurple1);
+}
+
+div.nav_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    width: 15.2%;
+}
+
+div.nav_buttons div.nav_button_container{
+    width: 47.6%;
+    height: 28px;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.nav_button_container a{
+    width: 100px;
+    height: 28px;
+    max-width: 100px;
+    background-color: var(--darkblue);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+div.nav_button p{
+    color: white;
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+div.navbar div.logo_container{
+    width: 42px;
+    height: 42px;
+}
+
+
+/* footer */
+
+div.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 4px 5px;
+    gap: 521px;
+
+    position: relative;
+    width: 998px;
+    height: 78px;
+    left: calc(50% - 998px/2);
+    top: 1130px;
+
+    background-color: var(--darkpurple1);
+}
