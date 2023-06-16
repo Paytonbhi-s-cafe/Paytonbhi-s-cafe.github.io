@@ -1,0 +1,145 @@
+<!DOCTYPE html>    
+<html>
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paytonbhi's Cafè</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav_buttons">
+            <div class="nav_button_container">
+                <a class="nav_button_hitbox" href="../index.html">
+                    <div class="nav_button">
+                        <p>Home</p>
+                    </div>
+                </a>
+            </div>
+            <div class="nav_button_container">
+                <a class="nav_button_hitbox" href="./Merch.html">
+                    <div class="nav_button">
+                        <p>Merch</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="logo_container">
+            <div class="logo_person"></div>
+        </div>
+    </div>
+    <div class="merch_item_overlay" id="testitem1">
+        <div class="merch_item_overlay_content">
+            <div class="merch_item_overlay_content_left">   
+                    <img src="">
+            </div>
+            <div class="merch_item_overlay_content_right" >
+                <div class="merch_item_overlay_text">
+                    <p class="merch_item_overlay_name">Name</p>
+                    <p class="merch_item_overlay_description">description</p>
+                </div>
+                <div class="merch_item_overlay_perchase">
+                    <div class="merch_item_overlay_price">
+                        <p class="price">00.00$</p>
+                        <p class="currency">USD</p>
+                    </div>
+                    <div class="purchase_button_container">
+                        <a class="purchase_button_hitbox" href="">
+                            <div class="purchase_button">
+                                <p class="purchase_text">Purchase</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="merch">
+        <div class="cover"></div>
+        <div class="content">
+            <div class="merch_items">
+                <a class="merch_item_hitbox" onclick="EnableMerchOverlay('testitem1')">
+                <div class="merch_item">
+                        <div class="merch_image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="merch_text">
+                            <h5>Name</h5>
+                            <p>Description</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="merch_item_hitbox" onclick="EnableMerchOverlay('testitem1')">
+                    <div class="merch_item">
+                            <div class="merch_image">
+                                <img src="" alt="">
+                            </div>
+                            <div class="merch_text">
+                                <h5>Name</h5>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                </a>
+                <a class="merch_item_hitbox" onclick="EnableMerchOverlay('testitem1')">
+                        <div class="merch_item">
+                                <div class="merch_image">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="merch_text">
+                                    <h5>Name</h5>
+                                    <p>Description</p>
+                                </div>
+                            </div>
+                </a>
+                <a class="merch_item_hitbox" onclick="EnableMerchOverlay('testitem1')">
+                            <div class="merch_item">
+                                    <div class="merch_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="merch_text">
+                                        <h5>Name</h5>
+                                        <p>Description</p>
+                                    </div>
+                                </div>
+                </a>
+                <a class="merch_item_hitbox" onclick="EnableMerchOverlay('testitem1')">
+                    <div class="merch_item">
+                            <div class="merch_image">
+                                <img src="" alt="">
+                            </div>
+                            <div class="merch_text">
+                                <h5>Name</h5>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>© 2023 Payton Behmlander, Paytonbhi’s Café, All Rights Reserved.</p>
+        </div>
+        <div class="logo_container">
+            <div class="logo_coffee">
+
+            </div>
+        </div>
+    </div>
+    <div id="outside_clickbox" onclick="DisableMerchOverlay()"></div>
+</body>
+<script>
+
+    function EnableMerchOverlay(item_name){
+        document.getElementById(item_name).style.display = 'flex';
+        document.getElementById('outside_clickbox').style.display = 'flex';
+        localStorage.setItem('merchoverlay', item_name);
+    }
+
+    function DisableMerchOverlay(){
+        var merchoverlay = localStorage.getItem('merchoverlay');
+        document.getElementById(merchoverlay).style.display = 'none';
+        document.getElementById('outside_clickbox').style.display = 'none';
+    }
+
+</script>
+</html>

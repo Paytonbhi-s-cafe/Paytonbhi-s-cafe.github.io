@@ -6,6 +6,7 @@
     --custompurple: #5905E3;
     --darkblue: #0924B5;
     --bodybackground: linear-gradient(var(--custompurple), var(--darkpurple2));
+    --overlaybackground: #40404080;
 }
 
 body{
@@ -167,6 +168,7 @@ div.home div.cover{
 
 div.home div.content{
     display: flex;
+    justify-content: space-between;
 }
 
 div.home div.content_left{
@@ -202,4 +204,287 @@ div.about_me_container p{
     letter-spacing: -0.02em;
 
     color: white;
+}
+
+div.stream_schedule_container div.schedule{
+    width: 456px;
+    height: 184px;
+}
+
+div.content_right div.menu_container{
+    width: 470px;
+    height: 530px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: var(--darkpurple1);
+}
+
+div.menu_container div.menu_items{
+    width: 445px;
+    height: 348px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.menu_items_left iframe{
+    width: 215px;
+    height: 348px;
+}
+
+div.menu_items div.menu_items_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+div.menu_items_right iframe{
+    width: 168px;
+    height: 168px;
+}
+
+/*_______________Merch_______________*/
+
+/* content */
+div.merch div.cover{
+    height: 496px;
+    margin: 12px 4px;
+
+    background-image: url(../Images/Merch_Page_Cover.png);
+    background-size: 100%;
+}
+
+/* content */
+
+div.merch div.content{
+    display: flex;
+    justify-content: center;
+}
+
+div.content div.merch_items{
+    width: 768px;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    row-gap: 60px;
+    column-gap: 110px;
+}
+
+div.merch_item{
+    width: 180px;
+    height: 270px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--darkpurple2);
+}
+
+a.merch_item_hitbox{
+    text-decoration: none;
+}
+
+div.merch_item div.merch_image img{
+    width: 168px;
+    height: 146px;
+    margin: 6px;
+}
+
+div.merch_item div.merch_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.merch_text h5, div.merch_text p{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: white;
+    text-decoration: none;
+}
+
+div.merch_text h5{
+    font-family: 'Pacifico';
+    font-size: 30px;
+    margin: 7px;
+}
+
+
+div.merch_text p{
+    font-family: 'Inter';
+    margin: 10px;
+}
+
+/* overlay */
+div.merch_item_overlay{
+    width: 1000px;
+    height: 461px;
+    display: none;
+    justify-content: center;
+    position: fixed;
+    background-color: var(--overlaybackground);
+    border-radius: 2px;
+    z-index: 1;
+    top: calc(50% - 230.5px);
+}
+
+div.merch_item_overlay_content{
+    width: 966px;
+    height: 461px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.merch_item_overlay_content_left{
+    width: 461px;
+    height: 461px;
+}
+
+div.merch_item_overlay_content_right{
+    width: 472px;
+    height: 461px;
+    display: flex;
+}
+
+div.merch_item_overlay_text{
+    width: 226px;
+    height: 461px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--darkpurple2);
+}
+
+p.merch_item_overlay_name{
+    margin: 10px;
+
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 84px;
+    text-align: center;
+    color: white;
+}
+
+p.merch_item_overlay_description{
+    padding: 10px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: white;
+}
+
+div.merch_item_overlay_perchase{
+    width: 246px;
+    height: 461px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--darkpurple1);
+}
+
+div.merch_item_overlay_price{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+p.price{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: white;
+}
+
+p.currency{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: white;
+}
+
+div.purchase_button_container{
+    width: 200px;
+    height: 62px;
+}
+
+a.purchase_button_hitbox{
+    width: 200px;
+    height: 62px;
+}
+
+div.purchase_button{
+    width: 200px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    background: var(--darkblue);
+    border-radius: 50px;
+}
+
+p.purchase_text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+    color: #FFFFFF;
+}
+
+#outside_clickbox{
+    position: fixed;
+    display: none;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* background-color: aquamarine; */
 }
