@@ -44,7 +44,6 @@ div.navbar{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    gap: 10px;
 
     position: relative;
     height: 62px;
@@ -94,9 +93,26 @@ div.nav_button p{
     font-size: 15px;
 }
 
+div.website_title div.title{
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    margin: 0;
+
+    height: 82px;
+}
+
 div.navbar div.logo_container{
     width: 42px;
     height: 42px;
+    margin-left: 108px;
 }
 
 
