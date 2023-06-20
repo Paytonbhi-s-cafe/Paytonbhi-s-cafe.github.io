@@ -201,10 +201,11 @@ div.footer{
 }
 
 div.footer div.logo_container{
-     width: 372px;
+    width: 70px;
     height: 70px;
     display: flex;
     justify-content: flex-end;
+    margin-left: 26%;
 }
 
 div.footer div.footer_notes{
@@ -262,6 +263,27 @@ div.copyright p{
     text-transform: capitalize;
     color: white;
     margin: 0;
+}
+
+/* RESPOSIVE RULES */
+@media screen and (max-width:700px) {
+    div.footer div.footer_notes p{
+        font-size: 10px;
+    }
+
+    div.copyright p{
+        font-size: 8px;
+    }
+
+    div.footer div.logo_container{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:440px) {
+    div.footer div.logo_container{
+        display: none;
+    }
 }
 
 /*_______________HOME_______________*/
@@ -372,11 +394,9 @@ div.menu_items_right iframe{
         flex-direction: column;
         align-items: center;
     }
-}
 
-@media screen and (max-width:480px) {
-    div.content_left div.about_me_container, div.content_left div.stream_schedule_container{
-        width: auto;
+    div.home div.content_left{
+        width: 60%;
     }
 
     div.about_me_container p{
@@ -389,12 +409,52 @@ div.menu_items_right iframe{
         width: auto;
     }
 
-    div.content_right{
-        width: 100%;
+    div.home div.content_right{
+        width: 60%;
     }
 
     div.content_right div.menu_container{
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    div.menu_container div.menu_items{
         width: auto;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    div.home div.content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.home div.content_left{
+        width: 80%;
+    }
+
+    div.about_me_container p{
+        width: auto;
+        height: 180px;
+        margin: 0 5% 0 5%;
+
+        font-size: 15px;
+    }
+
+    div.stream_schedule_container div.schedule{
+        width: auto;
+    }
+
+    div.home div.content_right{
+        width: 80%;
+    }
+
+    div.content_right div.menu_container{
+        width: calc(100% - 5px);
         height: auto;
         padding-bottom: 10px;
     }
@@ -530,9 +590,14 @@ div.merch_text p{
     margin: 10px;
 }
 
+
 /* overlay */
+div.overlay_desktop{
+    display: flex;
+}
+
 div.merch_item_overlay{
-    width: 1000px;
+    width: 100%;
     height: 461px;
     display: none;
     justify-content: center;
@@ -596,7 +661,7 @@ p.merch_item_overlay_description{
 }
 
 div.merch_item_overlay_perchase{
-    width: 246px;
+    width: 50%;
     height: 461px;
 
     display: flex;
@@ -689,3 +754,5 @@ p.purchase_text{
     bottom: 0;
     /* background-color: aquamarine; */
 }
+
+/* RESPOSIVE RULES */
