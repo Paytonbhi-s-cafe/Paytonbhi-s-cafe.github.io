@@ -201,8 +201,36 @@ div.footer{
 }
 
 div.footer div.logo_container{
-    width: 70px;
+     width: 372px;
     height: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.footer div.footer_notes{
+    width: fit-content;
+    height: 20px;
+
+    align-items: flex-end;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+
+    color: white;
+}
+
+div.footer div.footer_notes p{
+    margin: 0;
+}
+
+div.footer div.footer_notes p a{
+    text-decoration: none;
+    color: var(--custompurple);
 }
 
 div.footer div.copyright{
@@ -262,10 +290,11 @@ div.home div.content{
 div.home div.content_left, div.home div.content_right{
     display: flex;
     flex-direction: column;
+    width: 48%;
 }
 
 div.content_left div.about_me_container, div.content_left div.stream_schedule_container{
-    width: 470px;
+    width: 98%;
     height: 260px;
 
     background-color: var(--darkpurple1);
@@ -300,7 +329,7 @@ div.stream_schedule_container div.schedule{
 }
 
 div.content_right div.menu_container{
-    width: 470px;
+    width: 98%;
     height: 530px;
     margin: 5px;
 
@@ -377,6 +406,48 @@ div.menu_items_right iframe{
         height: auto;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media screen and (min-width:1646px){
+    div.content_left div.about_me_container, div.content_left div.stream_schedule_container{
+        height: 520px;
+    }
+
+    div.about_me_container p{
+        font-size: 40px;
+        line-height: 60px;
+        width: 90%;
+        height: 80%;
+    }
+
+    div.content_right div.menu_container{
+        height: 1050px;
+    }
+
+    .title{
+        font-size: 100px;
+        line-height: 120px;
+    }
+
+    div.menu_container div.menu_items{
+        width: 90%;
+        height: 80%;
+    }
+
+    div.menu_items_left, div.menu_items_right{
+        width: 50%;
+        height: 100%;
+    }
+
+    div.menu_items_left iframe{
+        width: 90%;
+        height: 100%;
+    }
+
+    div.menu_items_right iframe{
+        width: 90%;
+        height: 50%;
     }
 }
 
