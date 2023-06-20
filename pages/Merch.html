@@ -15,8 +15,8 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="nav_buttons" class="desktop">
-            <div class="nav_button_container" >
+        <div class="desktop nav_buttons">
+            <div class="nav_button_container">
                 <a class="nav_button_hitbox" href="../index.html">
                     <div class="nav_button">
                         <p>Home</p>
@@ -31,8 +31,8 @@
                 </a>
             </div>
         </div>
-        <div class="nav_buttons" class="mobal">
-
+        <div class="mobile nav_buttons">
+            <a onclick="EnableMerchOverlay('mobile_nav_overlay')"><img src="../Images/Mobile_Nav_Button.png"></a>
         </div>
         <div class="website_title">
             <div class="title">
@@ -41,6 +41,25 @@
         </div>
         <div class="logo_container">
             <div class="logo_person"></div>
+        </div>
+        <div id="mobile_nav_overlay">
+            <div class="mobile_nav_overlay_title_container">
+                <p>Pages</p>
+            </div>
+            <div class="nav_button_container">
+                <a class="nav_button_hitbox" href="./index.html">
+                    <div class="nav_button">
+                        <p>Home</p>
+                    </div>
+                </a>
+            </div>
+            <div class="nav_button_container">
+                <a class="nav_button_hitbox" href="./pages/Merch.html">
+                    <div class="nav_button">
+                        <p>Merch</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <div class="merch_item_overlay" id="testitem1">
@@ -76,11 +95,11 @@
                 <a class="merch_item_hitbox" onclick="EnableMerchOverlay('testitem1')">
                 <div class="merch_item">
                         <div class="merch_image">
-                            <img src="" alt="">
+                            <img src="../Images/CoffeeCup.png" alt="">
                         </div>
                         <div class="merch_text">
-                            <h5>Name</h5>
-                            <p>Description</p>
+                            <h5>Coming Soon</h5>
+                            <p>Coming Soon</p>
                         </div>
                     </div>
                 </a>
@@ -90,6 +109,14 @@
     <div class="footer">
         <div class="copyright">
             <p>© 2023 Payton Behmlander, Paytonbhi’s Café, All Rights Reserved.</p>
+        </div>
+        <div class="footer_notes">
+            <div>
+                <p class="footer_notes">Website Created and Writen By: <a class="footer_notes" href="">Erik Barker</a></p>
+            </div>
+            <div>
+                <p class="footer_notes">Found a bug? <a class="footer_notes" href="">Report Here</a></p>
+            </div>
         </div>
         <div class="logo_container">
             <div class="logo_coffee">

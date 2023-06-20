@@ -210,8 +210,6 @@ div.footer div.logo_container{
 div.footer div.footer_notes{
     width: fit-content;
     height: 20px;
-
-    align-items: flex-end;
     
     font-family: 'Inter';
     font-style: normal;
@@ -219,7 +217,7 @@ div.footer div.footer_notes{
     font-size: 12px;
     line-height: 15px;
     display: flex;
-    align-items: flex-end;
+    gap: 15px;
 
     color: white;
 }
@@ -455,11 +453,13 @@ div.menu_items_right iframe{
 
 /* content */
 div.merch div.cover{
-    height: 496px;
+    padding-top: calc((3456 / 6912) * 99.2%);
+    height: 0;
     margin: 12px 4px;
 
     background-image: url(../Images/Merch_Page_Cover.png);
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 /* content */
