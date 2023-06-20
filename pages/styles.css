@@ -9,12 +9,18 @@
     --overlaybackground: #40404080;
 }
 
+html{
+    width: 100%;
+}
+
 body{
     background: var(--custompurple);
     background: var(--bodybackground);
-    height: fit-content;
     margin: 0;
+    width: 100%;
 }
+
+
 /* Reacuring Objects */
 div.logo_person{
     width: 42px;
@@ -53,14 +59,26 @@ div.navbar{
     background-color: var(--darkpurple1);
 }
 
-div.nav_buttons{
+div.nav_buttons.desktop{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin: 0;
+    width: 150px;
+}
+
+div.nav_buttons.mobile{
     width: 15.2%;
+    height: 42px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.nav_buttons.mobile{
+    display: none;
 }
 
 div.nav_buttons div.nav_button_container{
@@ -110,9 +128,61 @@ div.website_title div.title{
 }
 
 div.navbar div.logo_container{
-    width: 42px;
+    width: 15.2%;
     height: 42px;
-    margin-left: 108px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* overlay for mobile */
+#mobile_nav_overlay{
+    position: absolute;
+    top: 82px;
+    left: 0;
+    
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+    width: 100px;
+    height: 200px;
+
+    background-color: var(--overlaybackground);
+    z-index: 1;
+}
+
+div.mobile_nav_overlay_title_container{
+    color: white;
+    margin: 0;
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+
+    height: 40px;
+
+    background-color: var(--darkpurple2);
+    z-index: 2;
+}
+
+div.mobile_nav_overlay_title_container p{
+    margin: 0;
+}
+
+/* RESPOSIVE RULES */
+@media screen and (max-width:530px) {
+    div.website_title div.title{
+        font-size: 13px;
+    }
+
+    div.desktop.nav_buttons{
+        display: none;
+    }
+
+    div.mobile.nav_buttons{
+        display: flex;
+    }
 }
 
 
@@ -173,11 +243,13 @@ div.copyright p{
 /* cover */
 
 div.home div.cover{
-    height: 496px;
+    padding-top: calc((3456 / 6912) * 99.2%);
+    height: 0;
     margin: 12px 4px;
 
     background-image: url(../Images/Home_Page_Cover.png);
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 /* Content */
@@ -187,7 +259,7 @@ div.home div.content{
     justify-content: space-between;
 }
 
-div.home div.content_left{
+div.home div.content_left, div.home div.content_right{
     display: flex;
     flex-direction: column;
 }
@@ -264,6 +336,48 @@ div.menu_items div.menu_items_right{
 div.menu_items_right iframe{
     width: 168px;
     height: 168px;
+}
+
+/* RESPOSIVE RULES */
+
+@media screen and (max-width:960px) {
+    div.home div.content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:480px) {
+    div.content_left div.about_me_container, div.content_left div.stream_schedule_container{
+        width: auto;
+    }
+
+    div.about_me_container p{
+        width: auto;
+        height: 180px;
+        margin: 0 10% 0 10%;
+    }
+
+    div.stream_schedule_container div.schedule{
+        width: auto;
+    }
+
+    div.content_right{
+        width: 100%;
+    }
+
+    div.content_right div.menu_container{
+        width: auto;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    div.menu_container div.menu_items{
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /*_______________Merch_______________*/

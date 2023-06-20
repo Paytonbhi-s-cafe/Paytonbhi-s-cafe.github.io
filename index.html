@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="nav_buttons">
+        <div class="desktop nav_buttons">
             <div class="nav_button_container">
                 <a class="nav_button_hitbox" href="./index.html">
                     <div class="nav_button">
@@ -31,6 +31,9 @@
                 </a>
             </div>
         </div>
+        <div class="mobile nav_buttons">
+            <a onclick="EnableMerchOverlay('mobile_nav_overlay')"><img src="./Images/Mobile_Nav_Button.png"></a>
+        </div>
         <div class="website_title">
             <div class="title">
                 <h1>Paytonbhi's Cafè</h1>
@@ -38,6 +41,25 @@
         </div>
         <div class="logo_container">
             <div class="logo_person"></div>
+        </div>
+        <div id="mobile_nav_overlay">
+            <div class="mobile_nav_overlay_title_container">
+                <p>Pages</p>
+            </div>
+            <div class="nav_button_container">
+                <a class="nav_button_hitbox" href="./index.html">
+                    <div class="nav_button">
+                        <p>Home</p>
+                    </div>
+                </a>
+            </div>
+            <div class="nav_button_container">
+                <a class="nav_button_hitbox" href="./pages/Merch.html">
+                    <div class="nav_button">
+                        <p>Merch</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <div class="home">
@@ -92,5 +114,21 @@
             </div>
         </div>
     </div>
+    <div id="outside_clickbox" onclick="DisableMerchOverlay()"></div>
 </body>    
+<script>
+
+    function EnableMerchOverlay(item_name){
+        document.getElementById(item_name).style.display = 'flex';
+        document.getElementById('outside_clickbox').style.display = 'flex';
+        localStorage.setItem('merchoverlay', item_name);
+    }
+
+    function DisableMerchOverlay(){
+        var merchoverlay = localStorage.getItem('merchoverlay');
+        document.getElementById(merchoverlay).style.display = 'none';
+        document.getElementById('outside_clickbox').style.display = 'none';
+    }
+
+</script>
 </html>
